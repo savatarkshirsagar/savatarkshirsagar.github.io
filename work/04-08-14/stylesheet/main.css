@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background: #fff;
+}
+ #wraper{
+ 	position: relative;
+ 	width:1000px;
+	margin:0 auto;
+	background: #ddd;
+	
+}
+header{
+	height:80px;
+	background: #0fd;
+	/*background: url(images/banner2.jpg) no-repeat;*/
+	border-bottom: 1px dotted #000;
+}
+#logo{
+	background: #0fd;
+
+	font-family:georgia;
+	
+}
+#logo h1{
+	margin-left:10px;
+	color:#9a1b36;
+
+	font-style: italic;
+	font-size: 35px;
+	/*text-shadow: 5px 5px 0px #171717;*/
+	
+
+}
+
+
+#logo h2{
+	margin:-9px 0 10px 50px;
+	color:green;
+	font-size: 15px;
+
+}
+#menu ul{
+	width:600px;
+	text-decoration:none; 
+	float:right;
+	
+}
+#menu li{
+	list-style: none;
+	display: inline-block;
+	margin-right: 30px;
+}
+#menu a{
+	display: inline-block;
+	background: #0fd;
+	color:#000;
+	text-decoration: none;
+}
+#menu a:hover{
+	background: skyblue;
+	color:yellow;
+}
+ #fm{
+ 	position: absolute;
+ 	top:5px;
+ 	right:5px;
+	
+}
+#ban{
+	width:1000px;
+	height:380px;
+	margin-top: 5px;
+	
+	background: url(../images/Banner.jpg) no-repeat;
+}
+#word{
+	color:#ede;
+	margin:0 auto;
+	padding:130px 0px 10px 35px;
+	font-size: 35px;
+	/*text-shadow: 5px 5px 1px #171717;*/
+}
+article{
+	width:1000px;
+	margin-top: 5px;
+	
+}
+#first{
+	width:305px;
+	height:300px;
+	float: left;
+	margin-top:10px;
+	margin-left: 20px;
+	
+	
+}
+#second{
+	width:305px;
+	height:300px;
+	float: left;
+	margin-top:10px;
+	margin-left: 20px;
+	
+}
+#third{
+	width:305px;
+	height:300px;
+	float: left;
+	margin-top:10px;
+	margin-left: 20px;
+	
+	
+}
+#more{
+	background:#ddd;
+	text-align: center;
+	color:green;
+}
+#rs{
+	background:#ddd;
+	text-align: center;
+	color:red;
+}
+#product{
+	width:1000px;
+	height:300px;
+	
+}
+h3{
+	background: #000;
+	color:#fff;
+	text-align: center;
+}
+#four{
+	width:230px;
+	height:250px;
+	background: #ddd;
+	float: left;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+footer{
+	width:1000px;
+	height:50px;
+	background: #0fd;
+}
+#foo{
+	color:#000;
+	font-size: 10px;
+	float: left;
+	margin:20px 0 10px 20px;
+}
+#foo2{
+	color:#000;
+	font-size: 10px;
+	float: right;
+	margin:20px 20px 10px 0px;
+}
+	#menu .hm{
+	color:red;
+	}
+

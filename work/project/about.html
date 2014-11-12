@@ -1,0 +1,215 @@
+
+<!DOCTYPE HTML>
+<head>
+<title>SRK Group</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+
+	<script>
+ 
+$(function(){
+ 
+    $(document).on( 'scroll', function(){
+ 
+        if ($(window).scrollTop() > 100) {
+            $('.scroll-top-wrapper').addClass('show');
+        } else {
+            $('.scroll-top-wrapper').removeClass('show');
+        }
+    });
+});
+</script>
+<script>
+ 
+$(function(){
+ 
+    $(document).on( 'scroll', function(){
+ 
+        if ($(window).scrollTop() > 100) {
+            $('.scroll-top-wrapper').addClass('show');
+        } else {
+            $('.scroll-top-wrapper').removeClass('show');
+        }
+    });
+ 
+    $('.scroll-top-wrapper').on('click', scrollToTop);
+});
+ 
+function scrollToTop() {
+    verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+    element = $('body');
+    offset = element.offset();
+    offsetTop = offset.top;
+    $('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
+}
+</script>
+</head>
+<body>
+	      <div class="header">
+	      	<div class="header_top">
+			        <div class="wrap">	 
+					<div class="logo">
+					   <a href="index.html"><img src="images/srk121.png"  alt="" /></a>
+
+					</div>
+						 <div class="menu">
+						    <ul>
+								<li ><a href="index.html">Home</a></li>
+								<li class="active"><a href="about.html">About Us</a></li>
+									<li><a href="currentproject.html">Current Projects</a></li>
+								<li><a href="Property.html">Completed Project</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+								<div class="clear"></div>
+					        </ul>       
+						</div>
+						<div class="clear"></div>
+				   </div>
+		      </div>		     
+	    </div>
+	  <div class="main">  
+	   <div class="wrap">  		 
+	       <div class="sidebar">
+	          <div class="sidebar_left_top">
+	      	     <div class="services">
+	      			<h3>Services</h3>
+				      	<div class="services_list">
+				      		<ul>
+						  		<li><a href="#">Mission</a></li>
+						  		<li><a href="#">Organizational Chart</a></li>
+						  		<li><a href="#">Departments</a></li>
+						  		<li><a href="#">Campus History</a></li>
+						  		<li><a href="#">Facilities Facts </a></li>
+						  		<li><a href="#">Vendor Information</a></li>
+						  		<li><a href="#">Directions to FRES</a></li>
+						  		
+				    		</ul>
+				      </div>
+	   			</div>
+	 		</div>
+	    		 <div class="sidebar_left_bottom">
+			    	<div class="projects">
+			    		<h3>Projects</h3>
+			    		<div class="project_img">
+				    	   <img src="images/project1.jpg">
+				    	   <img src="images/project2.jpg">
+				    	    <div class="view-all"><a href="index.html">See All</a></div>
+			    	   </div>
+			    	</div>
+	    		</div>
+	  		</div> 
+			
+       <div class="content">
+		      <div class="content_bottom">
+		      	<h2>About Us</h2>
+		      	<p>Our Company Values are based on Dedication, Respect for our clients investment and a constant drive to achieve the final goal. Together with our Clients, we grow and learn,with complete and unparalleled Dedication we provide comprehensive service to our client and strive to maximize our clients return to investment.With our professional team of consultants and our conveniently located offices we at SRK groups are able to assist several clients every month on all type of Real Estate Transactions. Focusing on Sales, Rentals and Property Management we strive to meet the ever growing demand of our Clients. Investing in our Sales Team and maintaining our first class reputation has given us a competitive edge and has allowed us to excel in one of the worlds most competitive Real Estate market. We continue to strive for Excellence. </p>
+		      	   
+		      		<img src="images/srk.png" alt="" />
+		      	    <p>A delight spreading to over 2,000 happy families in Latur, over 1.4 million sq.ft. of state-of-the-art and futuristic development, all are clear pointers towards the friendly customer base in Latur. And while our Customers are Kings for us, Nature is our Mother. Till date we have carried forward the rich heritage of eco-friendliness. With the second generation at the helm that's armed with futuristic vision and ambitious growth plans the company is all set to take the next leap. </p>
+		      </div>
+    	</div>
+    <div class="sidebar">
+        <div class="sidebar_right_top">
+     	  <h3>Complite Projects</h3>
+     	   <div class="latestnews">
+		     <div class="property"> <a href="#"> <img src="images/33.jpg" alt="Bank Colony">
+<ul class="detail">
+                    <li class="title"><strong>Vinayak Apartment </strong></li>
+                    <li><span class="fa fa-map-marker">&nbsp;</span> Friends colony, Latur</li>
+                    
+            </ul>
+      </a> </div>
+		     	<div class="view-all"><a href="events.html">ViewAll</a></div>
+          </div>	
+        </div>
+		<div class="scroll-top-wrapper show">
+<img src="images/up.png">
+    <span class="scroll-top-inner">
+        <i class="fa fa-2x fa-arrow-circle-up"></i>
+    </span>
+	</div>
+        <div class="sidebar_right_bottom">
+        	<h3>Member Login</h3>
+        	<div class="login_form">        		
+        		<form>
+        		 <div>
+				   <span><label>User Name</label></span>
+				   <span><input name="userName" type="text" class="textbox"></span>
+			     </div>
+	        	 <div>
+				   <span><label>Password</label></span>
+				   <span><input name="userName" type="password"></span>
+			     </div>
+	        	  <div>
+					 <span><input type="submit" class="mybutton" value="Submit"></span>
+				  </div>
+	        	  <span><a href="#">Forgot Password ?</a></span>
+	          </form>
+        	  	   <h4>Free registration <a href="#">Click here</a></h4>
+        	</div>
+         </div>
+       </div>
+	   
+    <div class="clear"></div>
+ </div>
+ 
+</div>
+    <div class="footer">
+	
+	<div class="wrap">
+	   <div class="section group">
+				<div class="col_1_of_4 span_1_of_4">
+				    <div class="location">
+				    	<h3>Location</h3>
+				    	<ul>
+				    		<li>S.R. Kharosekar</li>
+				    		 <li>12345678910,</li>
+						  	  <li>Laxmi Nagar Latur,</li>
+						  	  
+						  	   <li>Latur Maharashtra</li>
+						 </ul>
+				    </div>			
+				</div>
+				  <div class="col_1_of_4 span_1_of_4">
+					<h3>Corporate Links</h3>
+					<p><span><a href="index.html">Home</a></span></p>
+					<p><span><a href="about.html">About</a></span></p>
+					<p><span><a href="currentproject.html">Current Project</a></span></p>
+					<p><span><a href="property.html">Completed Project</a></span></p>
+					<p><span><a href="contact.html">Contact</a></span></p>
+				  </div>
+				     <div class="col_1_of_4 span_1_of_4">
+						<h3>Testimonials</h3>
+						<div class="Testimonials_desc">
+						<p><span class="up"><img src="images/quotes.png" alt=""> I would like to thank both of you for the cooperation/ guidance given to me while speeding up the required proceedings for booking a flat in "Govindraj". 
+
+
+
+
+
+SRK is lucky to have employees like you all. All the Best<span class="down"><img src="images/quotes-down.png" alt=""></span></p>
+					    <h5>- </h5>
+					   </div>
+					</div>
+						<div class="col_1_of_4 span_1_of_4">
+							   <h3>Contact Us</h3>
+							       <ul class="address">
+								  	  <li>SRK Groups</li>
+								  	 <li><span>Mobile :</span> +91 9078254238</li>
+								  	 <li><span>Telephone :</span> +00 000 12345678</li>
+								  	 <li><span>Fax :</span> +00 123 12345678</li>
+								  </ul>
+						  </div>
+					  </div>
+				</div>
+		  <div class="copy-right">
+		  <p class="cop">Copyright@Srkrealestate2014</p>
+			<div class="wrap">
+			 <p>Design by  <a href="">SRK</a></p>
+		      <div class="clear"></div>
+		</div>	
+	</div>
+ </div>	
+</body>
+</html>
+

@@ -10,22 +10,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>My Portfolio </title>
+    <title>Savata Kshirsagar</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/superfish.css" media="screen">
+		<script src="js/jquery.js"></script>
+		<script src="js/superfish.js"></script>
      <link rel="stylesheet" type="text/css" media="all" href="css/form.css">
   <link rel="stylesheet" type="text/css" media="all" href="css/responsive.css">
 	<link rel="shortcut icon" href="img/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
+   <link rel="stylesheet" type="text/css" href="css/default.css" />
         <link rel="stylesheet" type="text/css" href="css/component.css" />
-        <script src="js/modernizr.custom.js"></script>
+    <script src="js/modernizr.custom.js"></script>
    
     <link href="css/min.css" rel="stylesheet">
-   <!-- <link rel="stylesheet" href="css/tab.css" type="text/css"/>
-<link rel="stylesheet" href="css/mobile.css" type="text/css" />-->
+   <link rel="stylesheet" href="css/tab.css" type="text/css"/>
+<link rel="stylesheet" href="css/mobile.css" type="text/css" />
     
     <link href="css/main.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,7 +39,29 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+<script>
+		(function($){ //create closure so we can safely use $ as alias for jQuery
+			$(document).ready(function(){
+				// initialise plugin
+				var example = $('#example').superfish({
+					//add options here if required
+				});
+				// buttons to demonstrate Superfish's public methods
+				$('.destroy').on('click', function(){
+					example.superfish('destroy');
+				});
+				$('.init').on('click', function(){
+					example.superfish();
+				});
+				$('.open').on('click', function(){
+					example.children('li:first').superfish('show');
+				});
+				$('.close').on('click', function(){
+					example.children('li:first').superfish('hide');
+				});
+			});
+		})(jQuery);
+		</script>
 </head>
 
 <body>
@@ -57,9 +84,9 @@
             <li>
                 <a href="#about">About Me</a>
             </li>
-            <!--<li>
-                <a href="projcts/SRK Group.html" target="_blank">Project</a>
-            </li>-->
+            <li>
+                <a href="work/project/index.html"  target="_blank">Project</a>
+            </li>
             <li>
                 <a href="#portfolio">My Work</a>
             </li>
@@ -121,160 +148,422 @@
 <div id="dummay"></div>
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center" >
-                    <h2 style="color:orange">MY Work</h2>
-                    <ul id="cat">
-                            <li>Categories:</li>
-                            <li><a title="Html work" href="#ht">Html5 templates</a></li>
-                            <li><a title="web template" href="#photo">web templates</a></li>
-                            
-                            <li><a title="logos & banner" href="#logb">Logos & banner</a></li>
-                            
-                        </ul>
-						<br/>
-						<h3 id="ht">HTML5 Work</h3>
-                        <a href="work/dr/index.html" target="_bank" >
-                        <img src="img/work/dr.jpg" width="130" height="130" alt="Image "vspace="10" hspace="10" />
-             
-                        </a>
-                        <a href="work/04-08-14/ecommerce.html" target="_bank" >
-                        <img src="img/work/central mall.jpg" width="130" height="130" alt="Image "vspace="10" hspace="10" />
-             
-                        </a>
+        
+		<div class="content">
+				<!---start-services----->
+				<div class="gallery1">
+				<div class="wrap">
+					<h1>My<span>Work</span></h1>
+					<div class="clear"> </div>
+					<div class="container">
 
-                        <a href="work/travel/travel.html" target="_bank" >
-                        <img src="img/work/travel2.jpg" width="130" height="130" alt="Image "vspace="10" hspace="10" />
-             
-                        </a><br/>
-                                 <h3 id="photo">Web Template</h3>
-                                 
-                                        <a href="img/work/shoping.jpg" class="flipLightBox">
-                                        <img src="img/work/shoping.jpg" width="130" height="130" alt="Image 1" vspace="10" hspace="10" />
-                                        <span><b>Photoshop</b> Shopping template</span>
-                                        </a>
+					<ul id="filters" class="clearfix">
+						<li><span class="filter active" data-filter="app card icon logo web">All</span></li>
+						<li><span class="filter" data-filter="app">Html5/Css3</span></li>
+						<li><span class="filter" data-filter="card">Web Layouts</span></li>
+						<li><span class="filter" data-filter="icon">Logos/Banner</span></li>
+						<!--<li><span class="filter" data-filter="logo">Categorie5</span></li>-->
+						<li><span class="filter" data-filter="web">Posters</span></li>
+					</ul>
+					<div class="clear"></div>
+		<div id="portfoliolist">
+			
+			<!--<div class="portfolio logo1" data-cat="logo">
+				<div class="portfolio-wrapper">				
+					<a href="img/logo/punya.jpg" class="flipLightBox">
+						<img src="img/logo/punya.jpg"  alt="Image 2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Bird Document</a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>-->			
 
-                                    <a href="img/work/srk.jpg" class="flipLightBox">
-                                    <img src="img/work/srk.jpg" width="130" height="130" alt="Image 2" vspace="10" hspace="10"/>
-                                    <span><b>Photoshop</b><br />SRK Group Real Eastate template</span>
-                                    </a>
+			<div class="portfolio app" data-cat="app">
+				<div class="portfolio-wrapper">	
+					<a href="work/dr/index.html" target="_bank" >
+                        <img src="img/logo/dr.jpg"  alt="Image" /> 
+						</a>
+		
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Doctore Spacilist</a>
+							<span class="text-category">HTML5/css3 Website</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="portfolio app" data-cat="app">
+				<div class="portfolio-wrapper">	
+					<a href="work/travel/travel.html" target="_bank" >
+                        <img src="img/logo/travel2.jpg"  alt="Image" /> 
+						</a>
+		
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">TravelYaari</a>
+							<span class="text-category">HTML5/css3 Website</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>		
+			
+			<div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">						
+					<a href="img/work/posters.jpg" class="flipLightBox">
+						<img src="img/logo/posters.jpg"  alt="Image 2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Posters</a>
+							<span class="text-category">Web design</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>				
+			
+			<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">			
+					<a href="img/work/shoping.jpg" class="flipLightBox">
+						<img src="img/logo/shoping.jpg"  alt="Image 2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Shopping Mall</a>
+							<span class="text-category">Web Tempaltes</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+						
+			<div class="portfolio app" data-cat="app">
+				<div class="portfolio-wrapper">	
+					<a href="work/central/index.html" target="_bank" >
+                        <img src="img/logo/central-mall.jpg"  alt="Image" /> 
+						</a>
+		
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Doctore Spacilist</a>
+							<span class="text-category">HTML5/css3 Website</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>			
+			
+			<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">			
+					<a href="img/work/foods bazzar.jpg" class="flipLightBox">
+						<img src="img/logo/foods-bazzar.jpg"  alt="Image 2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">foods-bazzar</a>
+							<span class="text-category">Web Templates</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+			
+			<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">			
+					<a href="img/work/srk.jpg" class="flipLightBox">
+						<img src="img/logo/SRK22.jpg"  alt="Image 2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">SRK Real Esatate</a>
+							<span class="text-category">Web Templates</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+			
+			<div class="portfolio logo1" data-cat="logo">
+				<div class="portfolio-wrapper">			
+					<a href="img/work/travel.jpg" class="flipLightBox">
+						<img src="img/logo/travel.jpg"  alt="Image 2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Travel</a>
+							<span class="text-category">Web Templates</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																																							
+			
+			<div class="portfolio app" data-cat="app">
+				<div class="portfolio-wrapper">	
+					<a href="work/marata/index.html" target="_bank" >
+                        <img src="img/logo/marathwada.jpg"  alt="Image" /> 
+						</a>
+		
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Marathwada Univercity</a>
+							<span class="text-category">HTML5/css3 Website</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>														
+			
+			<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">	
+					<a href="img/work/travle.jpg" class="flipLightBox">
+						<img src="img/logo/travel.jpg"  alt="Image 2" />	
+					</a>						
+				
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Travel</a>
+							<span class="text-category">Web Tempaltes</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+				<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">	
+					<a href="img/work/nature2.jpg" class="flipLightBox">
+						<img src="img/logo/nature2.jpg"  alt="Image 2" />	
+					</a>						
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Nature</a>
+							<span class="text-category">Web Tempaltes</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">	
+					<a href="img/work/emailar.jpg" class="flipLightBox">
+						<img src="img/logo/emailar.jpg"  alt="Image 2" />	
+					</a>						
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Emailar</a>
+							<span class="text-category">Web Tempaltes</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">	
+					<a href="img/work/mobile.jpg" class="flipLightBox">
+						<img src="img/logo/mobile.jpg"  alt="Image 2" />	
+					</a>						
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Mobile</a>
+							<span class="text-category">Mobile Web Tempaltes</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
 
-                                <a href="img/work/foods bazzar.jpg" class="flipLightBox">
-                                <img src="img/work/foods bazzar.jpg" width="130" height="130" alt="Image 3" vspace="10" hspace="10" />
-                                <span><b>Photoshop</b> foods bazzar template</span>
-                                </a>
+			<!--<div class="portfolio logo1" data-cat="logo">
+				<div class="portfolio-wrapper">			
+					<img src="images/s3.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Mobi Sock</a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																	
 
-                        <a href="img/work/Travel.jpg" class="flipLightBox">
-                        <img src="img/work/Travel.jpg" width="130" height="130" alt="Image 4" vspace="10" hspace="10"/>
-                        <span><b>Photoshop</b> TravelYaari template</span>
-                        </a>
-                        <a href="img/work/nature2.jpg" class="flipLightBox">
-                        <img src="img/work/nature2.jpg" width="130" height="130" alt="Image "vspace="10" hspace="10" />
-                        <span><b>Photoshop</b> Nature template</span>
-                        </a>
-						<br/>
-						<a href="img/work/flower.jpg" class="flipLightBox">
-                        <img src="img/work/flower.jpg" width="130" height="130" alt="Image "vspace="10" hspace="10" />
-                        <span><b>Photoshop</b> Flower Shope template</span>
-                        </a>
-                        <a href="img/work/central mall.jpg" class="flipLightBox">
-                        <img src="img/work/central mall.jpg" width="130" height="130" alt="Image "vspace="10" hspace="10" />
-                        <span><b>Photoshop</b> Flower Shope template</span>
-                        </a>
-                        <a href="img/work/emailar.jpg" class="flipLightBox">
-                        <img src="img/work/emailar.jpg" width="130" height="130" alt="Image "vspace="10" hspace="10" />
-                        <span><b>Photoshop</b> Emailer template</span>
-                        </a>
-                        <a href="img/work/mobile.jpg" class="flipLightBox">
-                        <img src="img/work/mobile.jpg" width="90" height="130" alt="Image "vspace="10" hspace="10" />
-                        <span><b>Photoshop</b> Mobile Responsive template</span>
-                        </a>
-                                    <h3 id="logb">Logo & Banner</h3>
-                                                 <a href="img/logo/CONSTRCATION BALAJI.jpg" class="flipLightBox">
-                                        <img src="img/logo/CONSTRCATION BALAJI.jpg" width="100" height="80" alt="Image 1" vspace="10" hspace="10" />
-                                        <span><b>Photoshop</b> CONSTRCATION BALAJI Logo</span>
-                                        </a>
+			<div class="portfolio logo1" data-cat="logo">
+				<div class="portfolio-wrapper">			
+					<img src="images/s1.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Village Community Church</a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	-->												
+			
+			<div class="portfolio icon" data-cat="icon">
+					<div class="portfolio-wrapper">			
+					<a href="img/work/sunbrother.jpg" class="flipLightBox">
+						<img src="img/logo/sunbrother.jpg"  alt="Sun Brother" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title"> Sun Brother</a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>	
+				<div class="portfolio icon" data-cat="icon">
+					<div class="portfolio-wrapper">			
+					<a href="img/work/sun.jpg" class="flipLightBox">
+						<img src="img/logo/sun.jpg"  alt="Sun Brother" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title"> Sun </a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>	
+				<div class="portfolio icon" data-cat="icon">
+					<div class="portfolio-wrapper">			
+					<a href="img/work/balaji.jpg" class="flipLightBox">
+						<img src="img/logo/balaji.jpg"  alt="Sun Brother" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title"> Balaji Constraction</a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="portfolio icon" data-cat="icon">
+					<div class="portfolio-wrapper">			
+					<a href="img/work/shree.jpg" class="flipLightBox">
+						<img src="img/logo/shree.jpg"  alt="Sun Brother" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">  Shree Travels </a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="portfolio icon" data-cat="icon">
+					<div class="portfolio-wrapper">			
+					<a href="img/work/visa.jpg" class="flipLightBox">
+						<img src="img/logo/visa.jpg"  alt="Sun Brother" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title"> Visa Card </a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="portfolio icon" data-cat="icon">
+					<div class="portfolio-wrapper">			
+					<a href="img/work/punya.jpg" class="flipLightBox">
+						<img src="img/logo/punya.jpg"  alt="Sun Brother" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title"> Punya Nagari </a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="portfolio icon" data-cat="icon">
+					<div class="portfolio-wrapper">			
+					<a href="img/work/SHAREMARKET.jpg" class="flipLightBox">
+						<img src="img/logo/SHAREMARKET.jpg"  alt="Sun Brother" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title"> SHAREMARKET </a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>
+				<div class="portfolio icon" data-cat="icon">
+					<div class="portfolio-wrapper">			
+					<a href="img/work/hdfc.jpg" class="flipLightBox">
+						<img src="img/logo/hdfc.jpg"  alt="Sun Brother" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title"> HDFC BANK </a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">			
+					<a href="img/work/airte3l.jpg" class="flipLightBox">
+						<img src="img/logo/airte3l.jpg"  alt="airte3l" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Nivea</a>
+							<span class="text-category">Nivea Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>																								
 
-                                    <a href="img/logo/SUN.jpg" class="flipLightBox">
-                                    <img src="img/logo/SUN.jpg" width="100" height="60" alt="Image 2" vspace="10" hspace="10"/>
-                                    <span><b>Photoshop</b><br />sun logo</span>
-                                    </a>
-
-                                <a href="img/logo/richland.jpg" class="flipLightBox">
-                                <img src="img/logo/richland.jpg" width="120" height="80" alt="Image 3" vspace="10" hspace="10" />
-                                <span><b>Illustrator</b> richland logo</span>
-                                </a>
-
-                        <a href="img/logo/SUNBROTHER.jpg" class="flipLightBox">
-                        <img src="img/logo/SUNBROTHER.jpg" width="100" height="100" alt="Image 4" vspace="10" hspace="10"/>
-                        <span><b>Photoshop</b> SUNBROTHER</span>
-                        </a>
-                        <a href="img/logo/SHREE.jpg" class="flipLightBox">
-                        <img src="img/logo/SHREE.jpg" width="100" height="50" alt="Image "vspace="10" hspace="10" />
-                        <span><b>Photoshop</b> SHREE logo</span>
-                        </a>
-                        <a href="img/logo/SRK.jpg" class="flipLightBox">
-                        <img src="img/logo/SRK.jpg" width="100" height="130" alt="Image "vspace="10" hspace="10" />
-                        <span><b>Photoshop</b>SRK CONSTRACTION</span>
-                        </a>
-                                     <a href="img/logo/MUSICAL.jpg" class="flipLightBox">
-                                        <img src="img/logo/MUSICAL.jpg" width="100" height="80" alt="Image 1" vspace="10" hspace="10" />
-                                        <span><b>Photoshop</b> MUSICAL Logo</span>
-                                        </a>
-                                        <a href="img/logo/SHAREMARKET.jpg" class="flipLightBox">
-                                        <img src="img/logo/SHAREMARKET.jpg" width="100" height="80" alt="Image 1" vspace="10" hspace="10" />
-                                        <span><b>Photoshop</b> SHAREMARKET Logo</span>
-                                        </a>
-                                        <a href="img/logo/EXTRA.jpg" class="flipLightBox">
-                                        <img src="img/logo/EXTRA.jpg" width="100" height="80" alt="Image 1" vspace="10" hspace="10" />
-                                        <span><b>Photoshop</b> SHAREMARKET Logo</span>
-                                        </a>
-                                        <a href="img/logo/visa.jpg" class="flipLightBox">
-                                        <img src="img/logo/visa.jpg" width="100" height="80" alt="Image 1" vspace="10" hspace="10" />
-                                        <span><b>Photoshop</b> VIZA Card Logo</span>
-                                        </a><a href="img/logo/NOKIA.jpg" class="flipLightBox">
-                                        <img src="img/logo/NOKIA.jpg" width="100" height="80" alt="Image 1" vspace="10" hspace="10" />
-                                        <span><b>Photoshop</b> NOKIA Logo</span>
-                                        </a>
-										
-                                    <a href="img/logo/punya.jpg" class="flipLightBox">
-                                        <img src="img/logo/punya.jpg" width="100" height="80" alt="Image 1" vspace="10" hspace="10" />
-                                        <span><b>Photoshop</b> PUNYA NAGARI </span>
-                                        </a>
-
-                                    <!--<a href="img/logo/j2-[Converted].jpg" class="flipLightBox">
-                                    <img src="img/logo/j2-[Converted].jpg" width="50" height="50" alt="Image 2" vspace="10" hspace="10"/>
-                                    <span><b>Photoshop</b><br />PURE Gold logo</span>
-                                    </a>--><br/>
-                                     <a href="img/logo/foods.jpg" class="flipLightBox">
-                                    <img src="img/logo/foods.jpg" width="100" height="60" alt="Image 2" vspace="10" hspace="10"/>
-                                    <span><b>Illustrator</b><br />foods logo</span>
-                                    </a>
-
-                                <a href="img/logo/twitter.jpg" class="flipLightBox">
-                                <img src="img/logo/twitter.jpg" width="120" height="80" alt="Image 3" vspace="10" hspace="10" />
-                                <span><b>Photoshop</b> twitter logo</span>
-                                </a>
-
-                        <a href="img/logo/airte3l.jpg" class="flipLightBox">
-                        <img src="img/logo/airte3l.jpg" width="100" height="100" alt="Image 4" vspace="10" hspace="10"/>
-                        <span><b>Photoshop</b> Airtel Banner</span>
-                        </a>
-                        <a href="img/logo/nivea.jpg" class="flipLightBox">
-                        <img src="img/logo/nivea.jpg" width="100" height="50" alt="Image "vspace="10" hspace="10" />
-                        <span><b>Photoshop</b> Nivea logo</span>
-                        </a>
-                        <a href="img/logo/Posters.jpg" class="flipLightBox">
-                        <img src="img/logo/Posters.jpg" width="100" height="130" alt="Image "vspace="10" hspace="10" />
-                        <span><b>Photoshop</b> Posters</span>
-                        </a>
-                        
-                   <!-- <a href="#" class="btn btn-dark">View More Items</a>-->
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
+			<div class="portfolio icon" data-cat="icon">
+				<div class="portfolio-wrapper">			
+					<a href="img/logo/nivea.jpg" class="flipLightBox">
+						<img src="img/logo/nivea.jpg"  alt="Image 2" />
+					</a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Nivea</a>
+							<span class="text-category">Nivea Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+					
+				</div>
+			</div>				
+			
+																			
+		</div>
+           
         </div>
         <!-- /.container -->
     </section>
@@ -391,11 +680,90 @@
         });
     });
     </script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/fliplightbox.min.js"></script>
 <script type="text/javascript">$('body').flipLightBox()</script>
 <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/lightbox.js"></script>
+    <script src="js/lightbox.js"></script>-->
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});				
+			
+			},
+			
+			hoverEffect: function () {
+			
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+					}		
+				);				
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+	</script>
+	</div><!-- container -->
+	<script type="text/javascript" src="js/fliplightbox.min.js"></script>
+						<script type="text/javascript">$('body').flipLightBox()</script>
+						<div class="clear"> </div>
+				</div>
+			</div>
+			<!---End-about---->
+			<!---End-content----->
+		</div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	
+					<script type="text/javascript">
+							$(document).ready(function() {
+								/*
+								var defaults = {
+						  			containerID: 'toTop', // fading element id
+									containerHoverID: 'toTopHover', // fading element hover id
+									scrollSpeed: 1200,
+									easingType: 'linear' 
+						 		};
+								*/
+								
+								$().UItoTop({ easingType: 'easeOutQuart' });
+								
+							});
+						</script>
+   					 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+				
+		<!---End-footer----->
+		<!---End-wrap---->
 </body>
 
 </html>

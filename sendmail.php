@@ -41,5 +41,5 @@ else
 echo "<center><span class='textred' align='center'><b>Failed to send the E-mail from $mail_sub to $mail_to</b></span></center>";
 }
 
-echo ("<meta http-equiv='refresh' content='2;url=http://savatarkshirsagar.github.io/'>");// Your domain name.
+echo ("<meta http-equiv='refresh' content='2;url=https://savatarkshirsagar.github.io/'>");// Your domain name.
 ?>

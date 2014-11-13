@@ -576,7 +576,7 @@
         
         <h2 style="color:orange">Contact Details</h2>
         <form name="contact" id="hongkiat-form" method="POST" action="sendmail.php" onsubmit="return Validate()">
-        
+        <input name="hidSubmit" type="hidden" value="true" id="hidSubmit"/>
         <div id="wrapping" class="clearfix">
             <section id="aligned">
             <input type="text" name="txtName" id="name" placeholder="Your name" autocomplete="off" tabindex="1" class="txtinput" required>

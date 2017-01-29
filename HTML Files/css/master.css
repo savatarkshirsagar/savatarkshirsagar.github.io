@@ -1,0 +1,19 @@
+
+/* MAIN CSS */
+@import url('bootstrap.min.css');
+@import url('skin-bootstrap.css');
+@import url('font-awesome.min.css');
+@import url('style.css');
+@import url('responsive.css');
+
+
+@import url('owl.carousel.css');
+@import url('owl.theme.css');
+
+/* FONTS */
+@import url(//fonts.googleapis.com/css?family=Roboto:400,700,300,900,700italic,400italic,500,500italic,300italic);
+@import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url('../fonts/flaticon/flaticon.css');
+
+
+
